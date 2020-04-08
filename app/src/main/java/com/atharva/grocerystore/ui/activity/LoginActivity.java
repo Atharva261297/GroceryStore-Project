@@ -44,9 +44,9 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        showProgressBar();
         RuntimeData.user = mAuth.getCurrentUser();
         if (RuntimeData.user != null) {
+            showProgressBar();
             initDbRef();
             initUserData();
         }
