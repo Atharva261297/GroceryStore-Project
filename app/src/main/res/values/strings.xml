@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Grocery Store</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="account">Account</string>
+    <string name="logout">Log out</string>
+    <string name="cart">Cart</string>
+    <string name="applogo">AppLogo</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="name">Name</string>
+    <string name="phonenumber">PhoneNumber</string>
+    <string name="productphoto">ProductPhoto</string>
+    <string name="price">Price</string>
+    <string name="est_delivery">Est Delivery: </string>
+    <string name="weight_quantity">Weight/Quantity:</string>
+    <string name="_0">0</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="total_price">Total Price:</string>
+    <string name="quant">Quant</string>
+    <string name="cancel">Cancel</string>
+    <string name="next">Next</string>
+    <string name="proceed_to_buy">Proceed To Buy</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address Line 2</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="pincode">Postal Code</string>
+    <string name="confirm">Confirm</string>
+    <string name="address">Address: </string>
+    <string name="change_password">Change Password</string>
+    <string name="my_orders">My Orders</string>
+    <string name="est_delivery_3_days">Est Delivery within 3 days</string>
+</resources>

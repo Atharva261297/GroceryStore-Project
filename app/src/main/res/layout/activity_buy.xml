@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.BuyActivity">
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomPanelBuy"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/priceBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:ems="12"
+            android:textSize="22sp"
+            android:text="@string/total_price" />
+
+        <TextView
+            android:id="@+id/itemCountBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:ems="12"
+            android:textSize="22sp"
+            android:text="No of items: " />
+
+        <TextView
+            android:id="@+id/deliveryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:ems="12"
+            android:textSize="22sp"
+            android:text="@string/est_delivery" />
+
+        <TextView
+            android:id="@+id/addressBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:ems="12"
+            android:textSize="22sp"
+            android:text="@string/address" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:ems="15"
+            android:textSize="18sp"
+            android:text="Payment Method: Cash/Card on Delivery" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomPanelBuy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/white">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorAccentText"
+            android:textAllCaps="false"
+            android:text="@string/cancel"
+            android:textSize="18sp"
+            android:onClick="onCancel"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorAccentText"
+            android:textAllCaps="false"
+            android:text="@string/confirm"
+            android:textSize="18sp"
+            android:onClick="onConfirm" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.RegisterActivity">
+
+    <LinearLayout
+        android:id="@+id/register_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ProgressBar
+            tools:ignore="MissingConstraints"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/registerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.1"
+            android:id="@+id/appLogoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:contentDescription="@string/applogo" />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/appLogoLogin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:text="@string/app_name"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintHeight_percent="0.7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/rounded_corner_primary">
+
+            <EditText
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0.2"
+                android:background="@drawable/rounded_corner_white"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:id="@+id/nameRegister"
+                android:hint="@string/name"
+                android:inputType="textPersonName"
+                android:autofillHints="@string/name" />
+
+            <EditText
+                app:layout_constraintTop_toBottomOf="@id/nameRegister"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/rounded_corner_white"
+                android:layout_marginTop="30dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:id="@+id/emailRegister"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:autofillHints="@string/email" />
+
+            <EditText
+                app:layout_constraintTop_toBottomOf="@id/emailRegister"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/rounded_corner_white"
+                android:layout_marginTop="30dp"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:id="@+id/phoneRegister"
+                android:hint="@string/phonenumber"
+                android:inputType="phone"
+                android:autofillHints="@string/email" />
+
+            <EditText
+                app:layout_constraintTop_toBottomOf="@id/phoneRegister"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_corner_white"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textSize="22sp"
+                android:id="@+id/passwordRegister"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:importantForAutofill="no" />
+
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/passwordRegister"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorAccentText"
+                android:id="@+id/registerBtnLogin"
+                android:onClick="onRegister"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
