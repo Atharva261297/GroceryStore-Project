@@ -28,7 +28,6 @@ public class ProductActivity extends AppCompatActivity {
     TextView productQuantity;
     TextView productQuantitySelected;
 
-    private String name;
     private Product product;
 
     @SuppressLint("DefaultLocale")
@@ -42,14 +41,14 @@ public class ProductActivity extends AppCompatActivity {
         productQuantity = findViewById(R.id.productQuantity);
         productQuantitySelected = findViewById(R.id.productQuantitySelected);
 
-        name = getIntent().getStringExtra("name");
+        String name = getIntent().getStringExtra("name");
 
         product = RuntimeData.products.get(name);
         if (product != null) {
             Picasso.get().load(product.getPhoto()).into(productPhoto);
             productName.setText(product.getName());
             productPrice.setText(String.format("Price: %d", product.getPrice()));
-            productQuantity.setText(String.format("Price: %s", product.getQuantity()));
+            productQuantity.setText(String.format("Quantity: %s", product.getQuantity()));
         }
 
     }
@@ -61,7 +60,6 @@ public class ProductActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.cart:

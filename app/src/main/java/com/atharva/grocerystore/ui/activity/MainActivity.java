@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.cardview.widget.CardView;
 
 import com.atharva.grocerystore.R;
@@ -25,6 +26,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
+    SearchView searchView;
     LinearLayout productList;
 
     @Override
@@ -32,6 +34,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         productList = findViewById(R.id.productsViewList);
+        searchView = findViewById(R.id.searchProducts);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                productList.removeAllViews();
+                for (final Product p : RuntimeData.products.values()) {
+                    if (p.getName().toLowerCase().contains(query)) {
+                        productList.addView(getCardForProduct(p));
+                    }
+                }
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                productList.removeAllViews();
+                for (final Product p : RuntimeData.products.values()) {
+                    if (p.getName().contains(newText)) {
+                        productList.addView(getCardForProduct(p));
+                    }
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -82,22 +109,24 @@ public class MainActivity extends AppCompatActivity {
     private void showProducts() {
         productList.removeAllViews();
         for (final Product p : RuntimeData.products.values()) {
-
-            CardView card = ProductView.getMainScreenProductCard(
-                    getApplicationContext(),
-                    getResources(),
-                    p.getName(),
-                    p.getPhoto()
-            );
-
-            card.setOnClickListener(v -> {
-                Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
-                intent.putExtra("name", p.getName());
-                startActivity(intent);
-            });
-
-            productList.addView(card);
+            productList.addView(getCardForProduct(p));
         }
+    }
+
+    private CardView getCardForProduct(Product p) {
+        CardView card = ProductView.getMainScreenProductCard(
+                getApplicationContext(),
+                getResources(),
+                p.getName(),
+                p.getPhoto()
+        );
+
+        card.setOnClickListener(v -> {
+            Intent intent = new Intent(getApplicationContext(), ProductActivity.class);
+            intent.putExtra("name", p.getName());
+            startActivity(intent);
+        });
+        return card;
     }
 
     private ValueEventListener productListener() {

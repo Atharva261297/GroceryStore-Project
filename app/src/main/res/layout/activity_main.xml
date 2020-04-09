@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_margin="10dp"
-        android:background="@drawable/rounded_corner_secondary"
+        android:background="@drawable/rounded_corner_white_outline_secondary"
         android:id="@+id/searchProducts"/>
 
     <ScrollView
