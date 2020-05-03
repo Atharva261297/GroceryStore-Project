@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "468866107606",
+    "firebase_url": "https://grocery-store-123.firebaseio.com",
+    "project_id": "grocery-store-123",
+    "storage_bucket": "grocery-store-123.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468866107606:android:b592c72be6d0fef5f2e177",
+        "android_client_info": {
+          "package_name": "com.atharva.grocerystore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "468866107606-cdh6vqob02eesmi047nd9bvhgv9hcp16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAmay0Law26It34nV0rc-G-nU9jvac3e4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "468866107606-cdh6vqob02eesmi047nd9bvhgv9hcp16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
