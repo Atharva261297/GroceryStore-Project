@@ -55,9 +55,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:ems="15"
-            android:textSize="18sp"
-            android:text="Payment Method: Cash/Card on Delivery" />
+            android:ems="12"
+            android:textSize="22sp"
+            android:text="Select Payment Method" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/cashRadioBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:textSize="22sp"
+                android:layout_marginBottom="20sp"
+                android:text="Cash/Card on Delivery"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/gPayRadioBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:textSize="22sp"
+                android:layout_marginBottom="20sp"
+                android:text="Google Pay (Tez)"/>
+
+        </RadioGroup>
 
     </LinearLayout>
 

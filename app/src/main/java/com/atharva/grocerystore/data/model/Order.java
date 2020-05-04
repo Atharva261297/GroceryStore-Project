@@ -8,14 +8,16 @@ public class Order {
     private Map<String, Integer> products;
     private Integer price;
     private String address;
+    private String modeOfPayment;
 
     public Order() {
     }
 
-    public Order(Map<String, Integer> products, Integer price, String address) {
+    public Order(Map<String, Integer> products, Integer price, String address, String modeOfPayment) {
         this.products = products;
         this.price = price;
         this.address = address;
+        this.modeOfPayment = modeOfPayment;
     }
 
     public Order(Cart cart, int price, String address) {
@@ -49,5 +51,13 @@ public class Order {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getModeOfPayment() {
+        return modeOfPayment;
+    }
+
+    public void setModeOfPayment(String modeOfPayment) {
+        this.modeOfPayment = modeOfPayment;
     }
 }

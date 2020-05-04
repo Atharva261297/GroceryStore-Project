@@ -20,6 +20,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
 
     LinearLayout productsViewListOrderDetails;
     TextView priceOrderDetails;
+    TextView paymentModeOrderDetails;
     TextView addressOrderDetails;
 
     @Override
@@ -28,6 +29,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_order_details);
         productsViewListOrderDetails = findViewById(R.id.productsViewListOrderDetails);
         priceOrderDetails = findViewById(R.id.priceOrderDetails);
+        paymentModeOrderDetails = findViewById(R.id.paymentModeOrderDetails);
         addressOrderDetails = findViewById(R.id.addressOrderDetails);
         showProducts();
     }
@@ -55,6 +57,11 @@ public class OrderDetailsActivity extends AppCompatActivity {
         });
 
         priceOrderDetails.setText("Total Price: " + order.getPrice());
+        paymentModeOrderDetails
+                .setText("Payment Mode: " +
+                        (order.getModeOfPayment() == null || order.getModeOfPayment().isEmpty() ?
+                                "Cash/Card on Delivery": order.getModeOfPayment())
+                );
         addressOrderDetails.setText("Address: " + order.getAddress());
     }
 }

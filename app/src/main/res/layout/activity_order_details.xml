@@ -115,15 +115,32 @@
             android:id="@+id/priceOrderDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp10"
             android:text="@string/total_price"
+            android:textSize="26sp"/>
+
+        <TextView
+            android:id="@+id/paymentModeOrderDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp10"
+            android:text="@string/payment_mode"
             android:textSize="26sp"/>
 
         <TextView
             android:id="@+id/addressOrderDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
             android:text="@string/address"
             android:textSize="26sp"/>
 
